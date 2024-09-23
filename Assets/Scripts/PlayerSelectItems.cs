@@ -20,6 +20,9 @@ public class PlayerSelectItems : MonoBehaviour
     private delegate void UpdateDelegate();
     private UpdateDelegate updateFunction;
 
+    // Shared state
+    [SerializeField] float spherecastRadius = 1.0f;
+
     void Start()
     {
         // Initialize with a default state
@@ -94,8 +97,19 @@ public class PlayerSelectItems : MonoBehaviour
         }
 
         // Raycast
+        int hitLayer = CheckSpherecastHitLayer(spherecastRadius);
 
         // Check if we're over garbage or animatronic
+        if (hitLayer != -1)
+        {
+            string layerName = LayerMask.LayerToName(hitLayer);
+            if(layerName == "Garbage")
+                ChangeState(State.Garbage);
+            else if(layerName == "Animatronic")
+                ChangeState(State.Animatronic);
+
+            Debug.Log("Running State Spherecast hit layer: " + layerName);
+        }
 
     }
 
@@ -118,6 +132,25 @@ public class PlayerSelectItems : MonoBehaviour
     private void GarbageUpdate()
     {
         FadeInSelectionUI();
+
+        // Raycast
+        int hitLayer = CheckSpherecastHitLayer(spherecastRadius);
+
+        // Check if we're still over garbage
+        if (hitLayer != -1)
+        {
+            string layerName = LayerMask.LayerToName(hitLayer);
+            if(layerName == "Garbage")
+                return;
+            else if(layerName == "Animatronic")
+                ChangeState(State.Animatronic);
+            else
+                ChangeState(State.Default);
+
+            Debug.Log("Running State Spherecast hit layer: " + layerName);
+        } else{
+            ChangeState(State.Default);
+        }
     }
 
     #endregion
@@ -139,6 +172,25 @@ public class PlayerSelectItems : MonoBehaviour
     private void AnimatronicUpdate()
     {
         FadeInSelectionUI();
+
+        // Raycast
+        int hitLayer = CheckSpherecastHitLayer(spherecastRadius);
+
+        // Check if we're still over an animatronic
+        if (hitLayer != -1)
+        {
+            string layerName = LayerMask.LayerToName(hitLayer);
+            if(layerName == "Animatronic")
+                return;
+            else if(layerName == "Garbage")
+                ChangeState(State.Garbage);
+            else
+                ChangeState(State.Default);
+                
+            Debug.Log("Running State Spherecast hit layer: " + layerName);
+        } else{
+            ChangeState(State.Default);
+        }
     }
 
     #endregion
@@ -151,6 +203,30 @@ public class PlayerSelectItems : MonoBehaviour
             Color uiColor = selectionUIElement.color;
             uiColor.a += selectionUIFadeSpeed * Time.deltaTime;
             selectionUIElement.color = uiColor;
+        }
+    }
+
+    /// <summary>
+    /// Performs a spherecast with an adjustable radius and returns the layer of the first hit object.
+    /// </summary>
+    /// <param name="radius">The radius of the spherecast.</param>
+    /// <returns>The layer of the hit object, or -1 if nothing is hit.</returns>
+    private int CheckSpherecastHitLayer(float radius)
+    {
+        RaycastHit hit;
+        Vector3 origin = transform.position;
+        Vector3 direction = transform.forward;
+        float maxDistance = 1000f; // You can set this to a specific value if needed
+
+        if (Physics.SphereCast(origin, radius, direction, out hit, maxDistance))
+        {
+            int hitLayer = hit.collider.gameObject.layer;
+            return hitLayer;
+        }
+        else
+        {
+            // No hit detected
+            return -1;
         }
     }
 
