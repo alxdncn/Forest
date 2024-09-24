@@ -21,7 +21,11 @@ public class PlayerSelectItems : MonoBehaviour
     private UpdateDelegate updateFunction;
 
     // Shared state
-    [SerializeField] float spherecastRadius = 1.0f;
+    [SerializeField]
+    float spherecastRadius = 1.0f;
+
+    [SerializeField]
+    LayerMask spherecastMask;
 
     void Start()
     {
@@ -97,7 +101,7 @@ public class PlayerSelectItems : MonoBehaviour
         }
 
         // Raycast
-        int hitLayer = CheckSpherecastHitLayer(spherecastRadius);
+        int hitLayer = CheckSpherecastHitLayer(spherecastRadius, spherecastMask);
 
         // Check if we're over garbage or animatronic
         if (hitLayer != -1)
@@ -134,7 +138,7 @@ public class PlayerSelectItems : MonoBehaviour
         FadeInSelectionUI();
 
         // Raycast
-        int hitLayer = CheckSpherecastHitLayer(spherecastRadius);
+        int hitLayer = CheckSpherecastHitLayer(spherecastRadius, spherecastMask);
 
         // Check if we're still over garbage
         if (hitLayer != -1)
@@ -174,7 +178,7 @@ public class PlayerSelectItems : MonoBehaviour
         FadeInSelectionUI();
 
         // Raycast
-        int hitLayer = CheckSpherecastHitLayer(spherecastRadius);
+        int hitLayer = CheckSpherecastHitLayer(spherecastRadius, spherecastMask);
 
         // Check if we're still over an animatronic
         if (hitLayer != -1)
@@ -206,21 +210,43 @@ public class PlayerSelectItems : MonoBehaviour
         }
     }
 
+    // NOTE: This is an imperfect implementation because it doesn't actually return the first hit object.
+    // It returns the object most in the direction I'm looking.
+    // There are cases where this is not desired, but might not cause many issues for the time being.
+    
     /// <summary>
     /// Performs a spherecast with an adjustable radius and returns the layer of the first hit object.
     /// </summary>
     /// <param name="radius">The radius of the spherecast.</param>
     /// <returns>The layer of the hit object, or -1 if nothing is hit.</returns>
-    private int CheckSpherecastHitLayer(float radius)
+    private int CheckSpherecastHitLayer(float radius, LayerMask layerMask)
     {
-        RaycastHit hit;
         Vector3 origin = transform.position;
         Vector3 direction = transform.forward;
         float maxDistance = 1000f; // You can set this to a specific value if needed
 
-        if (Physics.SphereCast(origin, radius, direction, out hit, maxDistance))
+        // Perform the spherecast and get all hits
+        RaycastHit[] hits = Physics.SphereCastAll(origin, radius, direction, maxDistance, layerMask);
+
+        if (hits.Length > 0)
         {
-            int hitLayer = hit.collider.gameObject.layer;
+            RaycastHit bestHit = hits[0];
+            float highestDotProduct = -1f; // Initialize with -1 since dot product ranges from -1 to 1
+
+            foreach (RaycastHit hit in hits)
+            {
+                Vector3 toHit = (hit.point - origin).normalized;
+                float dotProduct = Vector3.Dot(toHit, direction);
+
+                if (dotProduct > highestDotProduct)
+                {
+                    highestDotProduct = dotProduct;
+                    bestHit = hit;
+                }
+            }
+
+            int hitLayer = bestHit.collider.gameObject.layer;
+            Debug.Log(hitLayer);
             return hitLayer;
         }
         else
