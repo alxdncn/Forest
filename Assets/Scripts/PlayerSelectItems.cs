@@ -213,7 +213,7 @@ public class PlayerSelectItems : MonoBehaviour
     // NOTE: This is an imperfect implementation because it doesn't actually return the first hit object.
     // It returns the object most in the direction I'm looking.
     // There are cases where this is not desired, but might not cause many issues for the time being.
-    
+
     /// <summary>
     /// Performs a spherecast with an adjustable radius and returns the layer of the first hit object.
     /// </summary>
@@ -246,7 +246,6 @@ public class PlayerSelectItems : MonoBehaviour
             }
 
             int hitLayer = bestHit.collider.gameObject.layer;
-            Debug.Log(hitLayer);
             return hitLayer;
         }
         else
