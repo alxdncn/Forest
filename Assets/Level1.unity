@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Conifer Bare HDRP
       objectReference: {fileID: 0}
+    - target: {fileID: 1743353957770956, guid: 4bee36a3c60253b4c8cbffb37e82cece, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4534264641828652, guid: 4bee36a3c60253b4c8cbffb37e82cece, type: 3}
       propertyPath: m_LocalPosition.x
       value: -110.609924
@@ -191,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pine_004_4
       objectReference: {fileID: 0}
+    - target: {fileID: 1913295019239370, guid: fb126211a1258014b819bcd530bbb82c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334692125666876, guid: fb126211a1258014b819bcd530bbb82c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.9
@@ -247,6 +255,10 @@ PrefabInstance:
     - target: {fileID: 1268013635547018, guid: e84c65e80a840e24581a78d8e6b77d3f, type: 3}
       propertyPath: m_Name
       value: Fir_07_Forest_cheap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268013635547018, guid: e84c65e80a840e24581a78d8e6b77d3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4286980411060574, guid: e84c65e80a840e24581a78d8e6b77d3f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -522,6 +534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pine_004_clump01_A
       objectReference: {fileID: 0}
+    - target: {fileID: 1744937351462788, guid: 16fdb0eb7b6ad27488a59d93a7c278e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4357677356854788, guid: 16fdb0eb7b6ad27488a59d93a7c278e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.238182
@@ -666,7 +682,7 @@ Transform:
   m_GameObject: {fileID: 242803818}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5101771, y: 73.7, z: -5.696014}
+  m_LocalPosition: {x: -226, y: 73.7, z: -189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -683,6 +699,10 @@ PrefabInstance:
     - target: {fileID: 1150689581386356, guid: 65b9e7300ae8b894596cc40d53725c0b, type: 3}
       propertyPath: m_Name
       value: pine_004_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150689581386356, guid: 65b9e7300ae8b894596cc40d53725c0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4027603928151568, guid: 65b9e7300ae8b894596cc40d53725c0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -975,6 +995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fir_05_Standalone_cheap
       objectReference: {fileID: 0}
+    - target: {fileID: 1492687703916904, guid: b109e9c5ed7fa2948babb88daa9901c9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4975862715486574, guid: b109e9c5ed7fa2948babb88daa9901c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60
@@ -1020,6 +1044,164 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b109e9c5ed7fa2948babb88daa9901c9, type: 3}
+--- !u!1 &609562121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609562123}
+  - component: {fileID: 609562122}
+  m_Layer: 0
+  m_Name: Ocean
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &609562122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609562121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f6fd535518f5540b4bcc3099582f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceType: 0
+  geometryType: 2
+  mesh: {fileID: 0}
+  cpuSimulation: 0
+  cpuFullResolution: 0
+  cpuEvaluateRipples: 0
+  timeMultiplier: 0.42
+  repetitionSize: 250
+  largeWindSpeed: 30
+  largeWindOrientationValue: 0
+  largeCurrentSpeedValue: 0
+  largeCurrentOrientationValue: 0
+  largeChaos: 0.85
+  largeBand0Multiplier: 0.489
+  largeBand0FadeToggle: 1
+  largeBand0FadeStart: 1500
+  largeBand0FadeDistance: 3000
+  largeBand1Multiplier: 1
+  largeBand1FadeToggle: 1
+  largeBand1FadeStart: 300
+  largeBand1FadeDistance: 800
+  ripples: 1
+  ripplesWindSpeed: 8
+  ripplesWindOrientationMode: 0
+  ripplesWindOrientationValue: 0
+  ripplesCurrentMode: 0
+  ripplesCurrentSpeedValue: 0
+  ripplesCurrentOrientationValue: 0
+  ripplesChaos: 0.8
+  ripplesFadeToggle: 1
+  ripplesFadeStart: 50
+  ripplesFadeDistance: 200
+  customMaterial: {fileID: 0}
+  startSmoothness: 0.242
+  endSmoothness: 0
+  smoothnessFadeStart: 100
+  smoothnessFadeDistance: 500
+  refractionColor: {r: 0.43921572, g: 0.5019608, b: 0.5019608, a: 1}
+  maxRefractionDistance: 0.5
+  absorptionDistance: 6.4
+  scatteringColor: {r: 0.2976, g: 0.4, b: 0.4, a: 1}
+  ambientScattering: 0.2
+  heightScattering: 0.2
+  displacementScattering: 0.1
+  directLightTipScattering: 0.6
+  directLightBodyScattering: 0.5
+  caustics: 0
+  causticsIntensity: 0.5
+  causticsPlaneBlendDistance: 1
+  causticsResolution: 256
+  causticsBand: 2
+  virtualPlaneDistance: 4
+  foam: 1
+  simulationFoamAmount: 0.2
+  simulationFoamDrag: 0
+  simulationFoamSmoothness: 1
+  foamMask: {fileID: 0}
+  foamMaskExtent: {x: 100, y: 100}
+  foamMaskOffset: {x: 0, y: 0}
+  windFoamCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.2
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  foamTexture: {fileID: 0}
+  foamTextureTiling: 0.15
+  waterMask: {fileID: 0}
+  waterMaskExtent: {x: 100, y: 100}
+  waterMaskOffset: {x: 0, y: 0}
+  decalLayerMask: 1
+  lightLayerMask: 1
+  underWater: 0
+  volumeBounds: {fileID: 0}
+  volumeDepth: 50
+  volumePrority: 0
+  transitionSize: 0.1
+  absorbtionDistanceMultiplier: 1
+--- !u!4 &609562123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609562121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &636687220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1031,6 +1213,10 @@ PrefabInstance:
     - target: {fileID: 1869616798682680, guid: 47e9e8b0b59ac0348878abd19dabcd83, type: 3}
       propertyPath: m_Name
       value: pine_004_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869616798682680, guid: 47e9e8b0b59ac0348878abd19dabcd83, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4585386308521648, guid: 47e9e8b0b59ac0348878abd19dabcd83, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1089,6 +1275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fir_04_Standalone_cheap
       objectReference: {fileID: 0}
+    - target: {fileID: 1658236888111968, guid: 2514ac27e3c642e47860e174d20e3aeb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4328342000357566, guid: 2514ac27e3c642e47860e174d20e3aeb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -76.5
@@ -1145,6 +1335,10 @@ PrefabInstance:
     - target: {fileID: 1157250216034030, guid: 91752ab4b97be114b83cce78d953f679, type: 3}
       propertyPath: m_Name
       value: Fir_06_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1157250216034030, guid: 91752ab4b97be114b83cce78d953f679, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4935832744287028, guid: 91752ab4b97be114b83cce78d953f679, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1203,6 +1397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_002_L
       objectReference: {fileID: 0}
+    - target: {fileID: 1450050763996020, guid: f7929b3a3952d9c41b729e4263e435e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4771514051263318, guid: f7929b3a3952d9c41b729e4263e435e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -91.58223
@@ -1259,6 +1457,10 @@ PrefabInstance:
     - target: {fileID: 1215118662403220, guid: e20bb7877bc0b2f4abf5115af4f24b04, type: 3}
       propertyPath: m_Name
       value: Fir_06_Forest_cheap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215118662403220, guid: e20bb7877bc0b2f4abf5115af4f24b04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4585630187838670, guid: e20bb7877bc0b2f4abf5115af4f24b04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1317,6 +1519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pine_004_5
       objectReference: {fileID: 0}
+    - target: {fileID: 1388354864828792, guid: cd4ec0b0e3380ae46aa7ec9af04483e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4963526484292508, guid: cd4ec0b0e3380ae46aa7ec9af04483e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -54.7228
@@ -1373,6 +1579,10 @@ PrefabInstance:
     - target: {fileID: 1759527095229760, guid: edbe4661ee778bc4f9c9a65b7f89b82b, type: 3}
       propertyPath: m_Name
       value: Fir_03_Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759527095229760, guid: edbe4661ee778bc4f9c9a65b7f89b82b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4278821079626666, guid: edbe4661ee778bc4f9c9a65b7f89b82b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1506,7 +1716,7 @@ Transform:
   m_GameObject: {fileID: 1133430660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -406, y: 0, z: -568}
+  m_LocalPosition: {x: -406, y: -40, z: -568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1523,6 +1733,10 @@ PrefabInstance:
     - target: {fileID: 1862648418451654, guid: c71cc421259bf5d46b538d886152b94f, type: 3}
       propertyPath: m_Name
       value: Fir_01_Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862648418451654, guid: c71cc421259bf5d46b538d886152b94f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428141364687994, guid: c71cc421259bf5d46b538d886152b94f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1581,6 +1795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pine_004_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1613528384441818, guid: 7514ce910ec717c46bd749cf062941f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4864383263659120, guid: 7514ce910ec717c46bd749cf062941f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -83.840965
@@ -1637,6 +1855,10 @@ PrefabInstance:
     - target: {fileID: 1364922359172550, guid: f90f2528cd087b143ab420a46ad8d702, type: 3}
       propertyPath: m_Name
       value: PF Conifer Small HDRP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364922359172550, guid: f90f2528cd087b143ab420a46ad8d702, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4689083990643298, guid: f90f2528cd087b143ab420a46ad8d702, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1782,7 +2004,7 @@ Transform:
   m_GameObject: {fileID: 1332872539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 73.792, z: 0}
+  m_LocalPosition: {x: 203.2, y: 73.792, z: -250.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1799,6 +2021,10 @@ PrefabInstance:
     - target: {fileID: 1812492026364048, guid: a6da4ad0e6122194c9ac2d6d4ef0b0c3, type: 3}
       propertyPath: m_Name
       value: Fir_07_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1812492026364048, guid: a6da4ad0e6122194c9ac2d6d4ef0b0c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4920539353058398, guid: a6da4ad0e6122194c9ac2d6d4ef0b0c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1856,6 +2082,10 @@ PrefabInstance:
     - target: {fileID: 1973708058709388, guid: f5aeefa80c1d6634e882de38479e2767, type: 3}
       propertyPath: m_Name
       value: Fir_05_Standalone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973708058709388, guid: f5aeefa80c1d6634e882de38479e2767, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4675836975374814, guid: f5aeefa80c1d6634e882de38479e2767, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1989,6 +2219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pine_004_6
       objectReference: {fileID: 0}
+    - target: {fileID: 1360243568863834, guid: a9890f89c54105745a59b9d16c908747, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4480865354115506, guid: a9890f89c54105745a59b9d16c908747, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45.197132
@@ -2045,6 +2279,10 @@ PrefabInstance:
     - target: {fileID: 1442081961505338, guid: b2f31eb4ad4fd4443b0e13feabd14de4, type: 3}
       propertyPath: m_Name
       value: Fir_08_Dead_Forest_cheap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442081961505338, guid: b2f31eb4ad4fd4443b0e13feabd14de4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4606853723561682, guid: b2f31eb4ad4fd4443b0e13feabd14de4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2170,6 +2408,10 @@ PrefabInstance:
     - target: {fileID: 1967707348568356, guid: 8dfd17a03533a0241b37daf2264ebdfd, type: 3}
       propertyPath: m_Name
       value: Prefab_Wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967707348568356, guid: 8dfd17a03533a0241b37daf2264ebdfd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4921507568758886, guid: 8dfd17a03533a0241b37daf2264ebdfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2469,6 +2711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Conifer Tall HDRP
       objectReference: {fileID: 0}
+    - target: {fileID: 1743353957770956, guid: 30efcfbe4949a9c4f8a3dc6240eb7c8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4534264641828652, guid: 30efcfbe4949a9c4f8a3dc6240eb7c8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -121.67403
@@ -2525,6 +2771,10 @@ PrefabInstance:
     - target: {fileID: 1508632783637986, guid: 390720c60888ad548aec22acefccffa4, type: 3}
       propertyPath: m_Name
       value: Fir_04_Standalone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508632783637986, guid: 390720c60888ad548aec22acefccffa4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4823332510797992, guid: 390720c60888ad548aec22acefccffa4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2644,7 +2894,7 @@ Transform:
   m_GameObject: {fileID: 1981954105}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.16432, y: 72.5, z: -9.196304}
+  m_LocalPosition: {x: 400.2, y: 66.29, z: -163.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2712,6 +2962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fir_02_Small
       objectReference: {fileID: 0}
+    - target: {fileID: 1601854496961328, guid: caea32e62fcc7ec4cbe028e4d6fae967, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4730499349575226, guid: caea32e62fcc7ec4cbe028e4d6fae967, type: 3}
       propertyPath: m_LocalPosition.x
       value: -104.2
@@ -2769,6 +3023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Conifer Medium HDRP
       objectReference: {fileID: 0}
+    - target: {fileID: 1214657917099862, guid: 25656fb33ec90e0469df029ec6b1ca70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4071390273635838, guid: 25656fb33ec90e0469df029ec6b1ca70, type: 3}
       propertyPath: m_LocalPosition.x
       value: -116.74765
@@ -2825,6 +3083,10 @@ PrefabInstance:
     - target: {fileID: 1773988963777952, guid: e951ba5a2a0a95140897beb94f06c772, type: 3}
       propertyPath: m_Name
       value: Fir_08_Dead_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773988963777952, guid: e951ba5a2a0a95140897beb94f06c772, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4088190675006862, guid: e951ba5a2a0a95140897beb94f06c772, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2910,3 +3172,4 @@ SceneRoots:
   - {fileID: 553318143}
   - {fileID: 1697994396}
   - {fileID: 1332872543}
+  - {fileID: 609562123}

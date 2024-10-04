@@ -154,13 +154,13 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   colorMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   color:
     m_OverrideState: 0
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   maxFogDistance:
     m_OverrideState: 0
@@ -175,20 +175,20 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1000
   baseHeight:
-    m_OverrideState: 0
-    m_Value: 220.2
+    m_OverrideState: 1
+    m_Value: 46.3
   maximumHeight:
-    m_OverrideState: 0
-    m_Value: 327.7
+    m_OverrideState: 1
+    m_Value: 51.5
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 294.2
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   albedo:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   globalLightProbeDimmer:
     m_OverrideState: 0
     m_Value: 1
@@ -222,6 +222,46 @@ MonoBehaviour:
   directionalLightsOnly:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-1808058722189855751
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76fd08475e21554b8f284f723dd7cf8, type: 3}
+  m_Name: WaterRendering
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  minGridSize:
+    m_OverrideState: 0
+    m_Value: 50
+  maxGridSize:
+    m_OverrideState: 0
+    m_Value: 2500
+  elevationTransition:
+    m_OverrideState: 0
+    m_Value: 1000
+  numLevelOfDetails:
+    m_OverrideState: 0
+    m_Value: 3
+  maxTessellationFactor:
+    m_OverrideState: 0
+    m_Value: 10
+  tessellationFactorFadeStart:
+    m_OverrideState: 0
+    m_Value: 150
+  tessellationFactorFadeRange:
+    m_OverrideState: 0
+    m_Value: 1850
+  ambientProbeDimmer:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +281,7 @@ MonoBehaviour:
   - {fileID: 7642060734654139733}
   - {fileID: 5049401361353796465}
   - {fileID: 676627371229769124}
+  - {fileID: -1808058722189855751}
 --- !u!114 &676627371229769124
 MonoBehaviour:
   m_ObjectHideFlags: 3
